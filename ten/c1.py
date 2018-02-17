@@ -11,6 +11,7 @@ result1= re.findall('\d',a)
 print(result)
 print(result1)
 
+
 # 字符集
 # 概括字符集
 # 数量词 (贪婪 与 非贪婪<?>)
