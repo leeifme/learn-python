@@ -17,6 +17,7 @@ def curve_pre():
 f = curve_pre()
 
 # 参看所包含的参数
-print(f.__closure__)
-print(f.__closure__[0].cell_contents)
+# print(f.__closure__)
+# print(f.__closure__[0].cell_contents)
+
 print(f(2))
