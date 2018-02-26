@@ -9,5 +9,6 @@ print(add(1,2))
 f = lambda x,y:x+y
 print(f(1,2))
 
-
+# 将表达式体现出来
+# lambda parameter_list: expression
 
