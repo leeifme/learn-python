@@ -34,7 +34,7 @@ class Spider():
         # print(anchors[0])
         return anchors
 
-    # 精简数据 排除干扰数据
+    # __refine 精简数据 排除干扰数据
     def __refine(self,anchors):
         l = lambda anchor:{
             'name':anchor['name'][0].strip(),
@@ -42,6 +42,7 @@ class Spider():
             }
         return map(l,anchors)
 
+    # __sort 数据排名
     def __sort(self,anchors):
         anchors = sorted(anchors,key = self.__sort_seed,reverse=True)
         return anchors
@@ -53,9 +54,10 @@ class Spider():
             number *= 10000
         return number
 
+    # 数据展示
     def show(self,anchors):
-        for anchor in anchors:
-            print(anchor['name'] + '------' + anchor['number'])
+        for rank in range(0, len(anchors)):
+            print('rank:'+ str(rank+1) +':'+anchors[rank]['name']+':'+anchors[rank]['number'])
 
     # 主控函数
     def go(self):
