@@ -21,6 +21,7 @@ class Spider():
         htmls = str(htmls, encoding = 'utf-8')
         return htmls   
 
+    
     # __analysis 通过正则表达式 从网页结构中获取所需要的数据
     def __analysis(self,htmls):
         root_html = re.findall(Spider.root_pattern,htmls)
